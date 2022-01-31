@@ -1,35 +1,28 @@
+using Bot;
 using Serilog;
-using ServiceBot;
 
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureAppConfiguration((app, config) =>
     {
         config.SetBasePath(Directory.GetCurrentDirectory())
+#if DEBUG
+              .AddJsonFile("appsettings.Development.json", true, true)
+#else
               .AddJsonFile("appsettings.json", true, true)
+#endif
               .AddEnvironmentVariables();
 
         Log.Logger = new LoggerConfiguration()
            .ReadFrom.Configuration(config.Build())
-           .Enrich.FromLogContext()
-           .WriteTo.Console()
            .CreateLogger();
-
-        if (app.HostingEnvironment.IsDevelopment())
-        {
-            // dev only
-        }
-        else
-        {
-            // prod only
-        }
     })
-    .ConfigureServices(services =>
-    {
-        services.AddHostedService<Worker>();
-    })
-    .UseSerilog()
+    .ConfigureServices((ctx, services) =>
+        services.AddSingleton(ctx.Configuration))
+    .UseSerilog((ctx, config) =>
+        config.ReadFrom.Configuration(ctx.Configuration))
+    .UseDiscordBot()
     .Build();
 
-Log.Logger.Information("Application is starting...");
+host.Services.GetRequiredService<ILogger<Program>>().LogInformation("Application is starting...");
 
 await host.RunAsync();

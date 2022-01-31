@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32104.313
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBot", "ConsoleBot\ConsoleBot.csproj", "{34559C07-DCE7-4D6C-B25E-77D7DDF43F20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBot", "ServiceBot\ServiceBot.csproj", "{7C3A27BD-94AC-470F-90AF-6DAAC91E071C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularBot", "AngularBot\AngularBot.csproj", "{606B93E2-F151-400E-97E0-C2C1202DCA53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bot", "Bot\Bot.csproj", "{3CECCB34-C17E-45B6-BD82-650BB3BB11E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBot", "ServiceBot\ServiceBot.csproj", "{7C3A27BD-94AC-470F-90AF-6DAAC91E071C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rcon", "Rcon\Rcon.csproj", "{E4A91818-B0C1-42C6-A67D-27CDEFC2E3EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Angular", "Angular\Angular.csproj", "{DA62DC4D-787D-4253-A188-95F294E75E23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{34559C07-DCE7-4D6C-B25E-77D7DDF43F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{34559C07-DCE7-4D6C-B25E-77D7DDF43F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{34559C07-DCE7-4D6C-B25E-77D7DDF43F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{34559C07-DCE7-4D6C-B25E-77D7DDF43F20}.Release|Any CPU.Build.0 = Release|Any CPU
-		{606B93E2-F151-400E-97E0-C2C1202DCA53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{606B93E2-F151-400E-97E0-C2C1202DCA53}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{606B93E2-F151-400E-97E0-C2C1202DCA53}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{606B93E2-F151-400E-97E0-C2C1202DCA53}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7C3A27BD-94AC-470F-90AF-6DAAC91E071C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7C3A27BD-94AC-470F-90AF-6DAAC91E071C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C3A27BD-94AC-470F-90AF-6DAAC91E071C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C3A27BD-94AC-470F-90AF-6DAAC91E071C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CECCB34-C17E-45B6-BD82-650BB3BB11E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CECCB34-C17E-45B6-BD82-650BB3BB11E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CECCB34-C17E-45B6-BD82-650BB3BB11E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CECCB34-C17E-45B6-BD82-650BB3BB11E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4A91818-B0C1-42C6-A67D-27CDEFC2E3EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4A91818-B0C1-42C6-A67D-27CDEFC2E3EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4A91818-B0C1-42C6-A67D-27CDEFC2E3EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4A91818-B0C1-42C6-A67D-27CDEFC2E3EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA62DC4D-787D-4253-A188-95F294E75E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA62DC4D-787D-4253-A188-95F294E75E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA62DC4D-787D-4253-A188-95F294E75E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA62DC4D-787D-4253-A188-95F294E75E23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
