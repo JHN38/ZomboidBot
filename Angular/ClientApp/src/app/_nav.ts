@@ -15,6 +15,10 @@ export const navItems: INavData[] = [
     name: 'Theme'
   },
   {
+    name: 'Fetch Data',
+    url: '/fetch-data',
+    icon: 'icon-cloud-download'
+  },  {
     name: 'Colors',
     url: '/theme/colors',
     icon: 'icon-drop'
