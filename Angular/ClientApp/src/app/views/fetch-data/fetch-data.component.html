@@ -4,6 +4,13 @@
 
 <p *ngIf="!forecasts"><em>Loading...</em></p>
 
+<div *ngIf="selectedForecast">
+  <h2><span>Date: </span>{{ selectedForecast.date }}</h2>
+  <div><span>TemperatureC: </span>{{ selectedForecast.temperatureC }}</div>
+  <div><span>TemperatureF: </span>{{ selectedForecast.temperatureF }}</div>
+  <div><span>Summary: </span>{{ selectedForecast.summary }}</div>
+</div>
+
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
   <thead>
     <tr>
@@ -14,7 +21,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let forecast of forecasts">
+    <tr *ngFor="let forecast of forecasts"
+        [class.selected]="forecast === selectedForecast"
+        (click)="onSelect(forecast)">
       <td>{{ forecast.date }}</td>
       <td>{{ forecast.temperatureC }}</td>
       <td>{{ forecast.temperatureF }}</td>

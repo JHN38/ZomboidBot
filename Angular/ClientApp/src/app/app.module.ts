@@ -43,6 +43,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { HttpClientModule } from '@angular/common/http';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   imports: [
@@ -69,7 +70,8 @@ import { HttpClientModule } from '@angular/common/http';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    MessagesComponent
   ],
   providers: [
     {
