@@ -4,6 +4,10 @@
 
 <p *ngIf="!forecasts"><em>Loading...</em></p>
 
+<button type="button" class="btn btn-sm btn-primary clear"
+        (click)="getWeather()">
+  <i class="fa fa-refresh fa-lg"></i>
+</button>
 <div *ngIf="selectedForecast">
   <h2><span>Date: </span>{{ selectedForecast.date }}</h2>
   <div><span>TemperatureC: </span>{{ selectedForecast.temperatureC }}</div>
