@@ -1,7 +1,5 @@
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { ChartsModule } from "ng2-charts";
-import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 import { ButtonsModule } from "ngx-bootstrap/buttons";
 
 import { FetchDataComponent } from "./fetch-data.component";
@@ -12,8 +10,6 @@ import { CommonModule } from "@angular/common";
   imports: [
     FormsModule,
     FetchDataRoutingModule,
-    ChartsModule,
-    BsDropdownModule,
     CommonModule,
     ButtonsModule.forRoot(),
   ],
