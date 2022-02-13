@@ -1,7 +1,11 @@
+using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Host.UseSerilog((ctx, config) =>
+        config.ReadFrom.Configuration(ctx.Configuration));
 
+// Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -21,7 +25,6 @@ app.UseCors(x => x
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
-
 
 app.MapControllerRoute(
     name: "default",
